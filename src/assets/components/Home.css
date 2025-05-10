@@ -1,0 +1,87 @@
+.home, .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home{
+    flex-direction: column;
+    height: 100vh;
+}
+
+.box-container{
+    width: 35vw;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box{
+    border: 1px solid var(--neutral-light-gray);
+    width: 30%;
+    aspect-ratio: 1;
+}
+
+.cross, .circle{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cross{
+    background-image: url(../images/cross.png);
+}
+
+.circle{
+    background-image: url(../images/circle.png);
+}
+
+.notification{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: var(--neutral-black);
+}
+
+.game-status{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--neutral-gray);
+    margin-bottom: .5rem;
+    visibility: hidden;
+}
+
+.win{
+    color: var(--light-theme-blue)
+}
+
+.lose{
+    color: var(--light-theme-red)
+}
+
+.retry{
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+button{
+    border: 1px solid var(--neutral-light-gray);
+    border-radius: 4px;
+    width: 364px;
+    height: 54px;
+    text-align: center;
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: var(--neutral-black);
+    margin-top: 20px;
+}

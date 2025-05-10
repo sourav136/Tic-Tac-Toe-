@@ -1,0 +1,48 @@
+:root {
+	--neutral-white: #fff;
+	--neutral-lighter-gray: #f1f1f1;
+	--neutral-light-gray: #e3e3e3;
+	--neutral-gray: #adadad;
+	--neutral-dark-gray: #808080;
+	--neutral-darker-gray: #575757;
+	--neutral-darkest-gray: #282828;
+	--neutral-black: #000;
+	--light-theme-blue: #46a3ff;
+	--light-theme-green: #00c096;
+	--light-theme-red: #ff827e;
+	--light-theme-yellow: #ffb048;
+	--dark-theme-blue: #2475c5;
+	--dark-theme-green: #00a682;
+	--dark-theme-red: #e45651;
+	--dark-theme-dark-blue: #212835;
+	--dark-theme-darker-blue: #12161f;
+	--dark-theme-dark: #0c1017;
+	--background-light: #fff;
+	--background-dark: #0c1017;
+	--text--light-primary: #000;
+	--text-light-secondary: #adadad;
+	--text-dark-primary: #adadad;
+	--text-dark-secondary: #575757;
+	--bottom-bar-light-background: #46a3ff;
+	--bottom-bar-light-active-color: #fff;
+	--bottom-bar-light-inactive-color: #2475c5;
+	--bottom-bar-dark-background: #212835;
+	--bottom-bar-dark-active-color: #adadad;
+	--bottom-bar-dark-inactive-color: #12161f;
+	--field-light-disabled: #f1f1f1;
+	--field-light-empty: #e3e3e3;
+	--field-light-filled-x: rgba(70, 163, 255, 0.2);
+	--field-light-stroke-x: #46a3ff;
+	--field-light-filled-o: rgba(255, 130, 126, 0.2);
+	--field-light-stroke-o: #ff827e;
+	--field-dark-disabled: #12161f;
+	--field-dark-empty: #212835;
+	--field-dark-filled-x: rgba(36, 117, 197, 0.2);
+	--field-dark-stroke-x: #2475c5;
+	--field-dark-filled-o: rgba(228, 86, 81, 0.2);
+	--field-dark-stroke-o: #e45651;
+}
+
+:root {
+  --font-family: "Roboto", sans-serif;
+}
