@@ -47,6 +47,12 @@ const Home = () => {
         }
     }
 
+    const resetGame = () => {
+        setBoard(Array(9).fill(null))
+        setIsXTurn(true)
+        setWinner(null)
+    }
+
     return (
         <>
             <div className="home">
@@ -73,7 +79,9 @@ const Home = () => {
                     }
                 </div>
 
-                <button><img src={Retry} alt="Retry icon" className='retry' />Play Again</button>
+                <button onClick={resetGame}>
+                    <img src={Retry} alt="Retry icon" className='retry' />Play Again
+                </button>
             </div>
         </>
     );
