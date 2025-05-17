@@ -55,7 +55,16 @@
     text-align: center;
     color: var(--neutral-gray);
     margin-bottom: .5rem;
-    visibility: hidden;
+    animation: statusAnimation 0.3s linear;
+}
+
+@keyframes statusAnimation{
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
 }
 
 .win{
