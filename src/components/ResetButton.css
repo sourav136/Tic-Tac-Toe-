@@ -10,7 +10,6 @@ button{
     border-radius: 4px;
     width: 32vw;
     height: 54px;
-    text-align: center;
     background-color: transparent;
     font-family: var(--font-family);
     font-weight: 400;
