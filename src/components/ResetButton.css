@@ -8,7 +8,7 @@
 button{
     border: 1px solid var(--neutral-light-gray);
     border-radius: 4px;
-    width: 364px;
+    width: 32vw;
     height: 54px;
     text-align: center;
     background-color: transparent;
@@ -18,4 +18,28 @@ button{
     text-align: center;
     color: var(--neutral-black);
     margin-top: 20px;
+}
+
+@media (max-width: 992px){
+    button{
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px){
+    button{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 576px){
+    button{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 420px){
+    button{
+        width: 80vw;
+    }
 }

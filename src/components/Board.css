@@ -8,6 +8,30 @@
     position: relative;
 }
 
+@media (max-width: 992px){
+    .box-container{
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px){
+    .box-container{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 576px){
+    .box-container{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 420px){
+    .box-container{
+        width: 80vw;
+    }
+}
+
 .blue-player, .pink-player{
     position: absolute;
     top: -20px;
