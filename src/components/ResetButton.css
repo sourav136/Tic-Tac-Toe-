@@ -1,0 +1,21 @@
+.retry{
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+button{
+    border: 1px solid var(--neutral-light-gray);
+    border-radius: 4px;
+    width: 364px;
+    height: 54px;
+    text-align: center;
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: var(--neutral-black);
+    margin-top: 20px;
+}

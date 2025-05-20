@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Home.css"
-import Retry from '../images/Vector.png'
+import Retry from '../assets/images/Vector.png'
 
 const Home = () => {
     const [board, setBoard] = useState(Array(9).fill(null));
@@ -77,6 +77,14 @@ const Home = () => {
                             </div>
                         ))
                     }
+                    <div className="blue-player">
+                        <div className="blue"></div>
+                        <p className='player'>Player 1</p>
+                    </div>
+                    <div className="pink-player">
+                        <div className="pink"></div>
+                        <p className='player'>Player 2</p>
+                    </div>
                 </div>
 
                 <button onClick={resetGame}>

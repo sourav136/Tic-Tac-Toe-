@@ -1,0 +1,44 @@
+.human-page{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.notification{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: var(--neutral-black);
+}
+
+.game-status{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: var(--neutral-gray);
+    margin-bottom: .5rem;
+    animation: statusAnimation 0.3s linear;
+}
+
+@keyframes statusAnimation{
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.xwin{
+    color: var(--light-theme-blue)
+}
+
+
+.owin{
+    color: var(--light-theme-red)
+}

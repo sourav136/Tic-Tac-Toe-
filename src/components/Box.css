@@ -1,0 +1,22 @@
+.box{
+    border: 1px solid var(--neutral-light-gray);
+    width: 30%;
+    aspect-ratio: 1;
+}
+
+.cross, .circle{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.cross{
+    background-image: url(../assets/images/cross.png);
+}
+
+.circle{
+    background-image: url(../assets/images/circle.png);
+}
