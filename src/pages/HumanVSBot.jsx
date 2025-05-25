@@ -45,7 +45,7 @@ const HumanVSBot = () => {
         const botLogic = difficulty[mode];
         const botMoveIndex = botLogic(board);
 
-        if (botMoveIndex === undefined) return;
+        if (botMoveIndex === undefined || botMoveIndex === null) return;
 
         setTimeout(() => {
             setBoard(prevBoard => {
@@ -66,7 +66,7 @@ const HumanVSBot = () => {
             });
         }, 500);
         
-    }, [isXTurn, winner, mode, setBoard]);
+    }, [isXTurn, winner, mode, setBoard, board]);
 
 
 

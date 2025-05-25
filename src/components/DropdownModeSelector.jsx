@@ -3,7 +3,13 @@ import './DropdownModeSelector.css'
 import { useGame } from '../context/GameContext';
 
 const DropdownModeSelector = () => {
-    const {mode, setMode} = useGame();
+    const {mode, setMode, resetGame} = useGame();
+
+    const handleModeChange = (e)=>{
+        setMode(e.target.value);
+
+        resetGame();
+    }
 
     return (
         <>
@@ -14,7 +20,7 @@ const DropdownModeSelector = () => {
                 <select 
                 id="mode-select" 
                 value={mode}
-                onChange={(e)=> setMode(e.target.value)}
+                onChange={handleModeChange}
                 >
                     <option className='dropdown-item' value="easy">Easy</option>
                     <option className='dropdown-item' value="medium">Medium</option>

@@ -26,6 +26,8 @@ export const mediumBot = (board) =>{
                         .map((val, i) => val === null? i : null)
                         .filter(val => val !== null)
     
+    if (emptyBoxes.length===0) return null;
+    
     const randomIndex = emptyBoxes[Math.floor(Math.random() * emptyBoxes.length)]
     return randomIndex;
 }
