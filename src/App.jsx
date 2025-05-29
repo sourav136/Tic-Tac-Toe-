@@ -6,19 +6,22 @@ import Mode from './components/Mode';
 import HumanVSHuman from './pages/HumanVSHuman';
 import HumanVSBot from './pages/HumanVSBot';
 import { GameProvider } from './context/GameContext';
+import { ThemeProvider } from './context/ThemeContext';
 const App = () => {
   return (
-    <>
-      <GameProvider>
-        <HashRouter >
-          <Routes>
-            <Route exact path='/' Component={Mode}/>
-            <Route exact path='/human' Component={HumanVSHuman}/>
-            <Route exact path='/bot' Component={HumanVSBot}/>
-          </Routes>
-        </HashRouter>
-      </GameProvider>
-    </>
+    <div className='app-container'>
+      <ThemeProvider>
+        <GameProvider>
+          <HashRouter >
+            <Routes>
+              <Route exact path='/' Component={Mode}/>
+              <Route exact path='/human' Component={HumanVSHuman}/>
+              <Route exact path='/bot' Component={HumanVSBot}/>
+            </Routes>
+          </HashRouter>
+        </GameProvider>
+      </ThemeProvider>
+    </div>
   );
 };
 

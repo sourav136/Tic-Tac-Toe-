@@ -4,12 +4,11 @@ import { useGame } from '../context/GameContext';
 import { checkWinner } from '../logic/logic';
 import Board from '../components/Board';
 import ResetButton from './../components/ResetButton';
-import { Link } from 'react-router-dom';
-import Back from '../assets/images/arrow-left-solid.svg'
 import { easyBot } from './../logic/bot/easyBot';
 import { mediumBot } from './../logic/bot/mediumBot';
 import { hardBot } from './../logic/bot/hardBot';
 import DropdownModeSelector from '../components/DropdownModeSelector';
+import Head from '../components/Head';
 
 const HumanVSBot = () => {
     const {board, setBoard, isXTurn, setIsXTurn, winner, setWinner, mode} = useGame();
@@ -71,26 +70,28 @@ const HumanVSBot = () => {
 
 
     return (
-        <div className='game-page container'>
+        <>
+            <Head/>
             <DropdownModeSelector/>
-            <h1 className='notification'>
+            <div className='game-page container'>
+                <h1 className='notification mt-4'>
+                    {
+                        winner? (winner === "Draw" ? "Oops!!" : "Congratulations!!") : `${isXTurn ? "Your turn" : "Bot's turn"}`
+                    }
+                </h1>
                 {
-                    winner? (winner === "Draw" ? "Oops!!" : "Congratulations!!") : `${isXTurn ? "Your turn" : "Bot's turn"}`
+                    winner && (
+                        <p className={`game-status ${winner && winner=== "X"? "xwin" : "owin"}`}>
+                            {winner === "Draw" ? "It's a draw.. Try again!" : `${winner=== "X" ? "You Win!!!" : "Bot Wins!!!"}`}
+                        </p>
+                    )
                 }
-            </h1>
-            {
-                winner && (
-                    <p className={`game-status ${winner && winner=== "X"? "xwin" : "owin"}`}>
-                        {winner === "Draw" ? "It's a draw.. Try again!" : `${winner=== "X" ? "You Win!!!" : "Bot Wins!!!"}`}
-                    </p>
-                )
-            }
-            <Board board={board} onClick={handleClick} playerO={"Bot"} playerX={"You"}/>
-            
-            <ResetButton/>
+                <Board board={board} onClick={handleClick} playerO={"Bot"} playerX={"You"}/>
+                
+                <ResetButton/>
 
-            <Link className='back' to="/"><img className='back-icon' src={Back} alt="Back icon" />Back</Link>
-        </div>
+            </div>
+        </>
     );
 };
 

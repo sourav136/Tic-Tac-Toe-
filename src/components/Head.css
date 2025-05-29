@@ -1,0 +1,6 @@
+.haed{
+    height: 60px;
+    width: 100%;
+    background-color: var(--neutral-lighter-gray);
+    border-bottom: 1px solid var(--neutral-light-gray);
+}

@@ -1,26 +1,20 @@
-#mode-select{
+.theme-toggler{
     border: 1px solid var(--neutral-light-gray);
     border-radius: 4px;
-    width: 120px;
-    height: 45px;
+    width: 100px;
+    height: 44px;
     background-color: transparent;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
     text-align: center;
     color: var(--neutral-black);
-    outline: none;
+    margin-top: 0;
 }
 
-.mode-head{
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    font-weight: 500;
+.theme-icon{
+    height: 20px;
+    width: 20px;
     color: var(--neutral-black);
     margin-right: 10px;
-}
-
-.dropdown-container{
-    margin-top: 30px;
 }

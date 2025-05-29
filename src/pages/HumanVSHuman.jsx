@@ -4,8 +4,7 @@ import { useGame } from '../context/GameContext';
 import { checkWinner } from '../logic/logic';
 import Board from '../components/Board';
 import ResetButton from './../components/ResetButton';
-import Back from '../assets/images/arrow-left-solid.svg'
-import { Link } from 'react-router-dom';
+import Head from '../components/Head';
 
 const HumanVSHuman = () => {
     const {board, setBoard, isXTurn, setIsXTurn, winner, setWinner, resetGame} = useGame();
@@ -28,25 +27,27 @@ const HumanVSHuman = () => {
     }
 
     return (
-        <div className='game-page'>
-            <h1 className='notification'>
+        <>
+            <Head/>
+            <div className='game-page'>
+                <h1 className='notification'>
+                    {
+                        winner? (winner === "Draw" ? "Oops!!" : "Congratulations!!") : `${isXTurn ? "Player 1" : "Player 2"}'s turn`
+                    }
+                </h1>
                 {
-                    winner? (winner === "Draw" ? "Oops!!" : "Congratulations!!") : `${isXTurn ? "Player 1" : "Player 2"}'s turn`
+                    winner && (
+                        <p className={`game-status ${winner && winner=== "X"? "xwin" : "owin"}`}>
+                            {winner === "Draw" ? "It's a draw.. Try again!" : `${winner=== "X" ? "Plater 1" : "Player 2"} Wins!!!`}
+                        </p>
+                    )
                 }
-            </h1>
-            {
-                winner && (
-                    <p className={`game-status ${winner && winner=== "X"? "xwin" : "owin"}`}>
-                        {winner === "Draw" ? "It's a draw.. Try again!" : `${winner=== "X" ? "Plater 1" : "Player 2"} Wins!!!`}
-                    </p>
-                )
-            }
-            <Board board={board} onClick={handleClick} playerO={"Player 2"} playerX={"Player 1"}/>
-            
-            <ResetButton/>
+                <Board board={board} onClick={handleClick} playerO={"Player 2"} playerX={"Player 1"}/>
+                
+                <ResetButton/>
 
-            <Link className='back' to="/"><img className='back-icon' src={Back} alt="Back icon" />Back</Link>
-        </div>
+            </div>
+        </>
     );
 };
 

@@ -12,7 +12,7 @@ const DropdownModeSelector = () => {
     }
 
     return (
-        <>
+        <div className='d-flex justify-content-center'>
             <div className="dropdown-container">
                 <label className='mode-head' htmlFor="mode-select">
                     Difficulty: 
@@ -27,7 +27,7 @@ const DropdownModeSelector = () => {
                     <option className='dropdown-item' value="hard">Hard</option>
                 </select>
             </div>
-        </>
+        </div>
     );
 };
 
