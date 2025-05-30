@@ -12,6 +12,10 @@
     outline: none;
 }
 
+#mode-select option{
+    background-color: var(--background-light);
+}
+
 .mode-head{
     font-family: var(--font-family);
     font-weight: 400;
