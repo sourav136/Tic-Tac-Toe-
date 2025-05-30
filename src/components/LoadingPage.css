@@ -1,0 +1,13 @@
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-light);
+    position: fixed;
+    inset: 0;
+}
+
+.loading-page-logo{
+    height: 150px;
+    width: 172px;
+}

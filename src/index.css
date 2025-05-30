@@ -57,4 +57,5 @@
 
 .app-container{
 	background-color: var(--background-light);
+	min-height: 100vh;
 }

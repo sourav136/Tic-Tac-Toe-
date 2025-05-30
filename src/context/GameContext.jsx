@@ -45,6 +45,7 @@ export const GameProvider = ({children}) => {
     const [isXTurn, setIsXTurn] = useState(getInitialTurn);
     const [winner, setWinner] = useState(getInitialWinner);
     const [mode, setMode] = useState(getInitialMode);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const gameData = {board, isXTurn, mode, winner}
@@ -58,7 +59,7 @@ export const GameProvider = ({children}) => {
     }
 
     return(
-        <GameContext.Provider value={{board, setBoard, isXTurn, setIsXTurn, winner, setWinner, resetGame, mode, setMode}}>
+        <GameContext.Provider value={{board, setBoard, isXTurn, setIsXTurn, winner, setWinner, resetGame, mode, setMode, loading, setLoading}}>
             {children}
         </GameContext.Provider>
     )
