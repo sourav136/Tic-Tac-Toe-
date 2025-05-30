@@ -56,6 +56,10 @@ export const GameProvider = ({children}) => {
         setBoard(Array(9).fill(null));
         setIsXTurn(true);
         setWinner(null);
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 1500)
     }
 
     return(
