@@ -12,10 +12,10 @@ const Mode = () => {
         <div className='mode'>
             <h1 className='mode-heading'>Select Mode</h1>
             <Link className='mode-link mb-4' to="/human">
-                Human <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Human} alt="Human Icon" /> VS Human <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Human} alt="Human Icon" />
+                Human <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Human} alt="Human Icon" /> VS <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Human} alt="Human Icon" /> Human 
             </Link>
             <Link className='mode-link' to="/bot">
-                Human <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Human} alt="Human Icon" /> VS Bot <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Bot} alt="" />
+                Human <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Human} alt="Human Icon" /> VS <img className={`mode-icon ${theme === "dark" ? "dark" : ""}`} src={Bot} alt="" /> AI 
             </Link>
         </div>
     );

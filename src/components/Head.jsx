@@ -7,8 +7,8 @@ const Head = () => {
     return (
         <div className='haed'>
             <div className="container h-100 d-flex align-items-center justify-content-between">
-                <ThemeToggler/>
                 <Back/>
+                <ThemeToggler/>
             </div>
         </div>
     );
